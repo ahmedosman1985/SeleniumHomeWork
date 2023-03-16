@@ -27,10 +27,10 @@ public class Task1 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Selenium Webdriver']")));
 
         driver.findElement(By.xpath("//button[@onclick='setTimeout(display,10000);hidecount();hide();']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='hidden']"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='hidden']")));
 
         driver.findElement(By.xpath("//button[@id='enable-button']")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Button']")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Button']")));
 
         driver.findElement(By.xpath("//button[@id='checkbox']")).click();
         wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//input[@type='checkbox']")));
